@@ -14,6 +14,22 @@ const MockTodoFooter = ({ numberOfIncompleteTasks }) => {
 }
 
 describe("TodoFooter", () => {
+    beforeEach(() => {
+        console.log("Running before each test")
+    })
+
+    beforeAll(() => {
+        console.log("Running once before all tests")
+    })
+
+    afterEach(() => {
+        console.log("Running after each test")
+    })
+
+    afterAll(() => {
+        console.log("Ran once after all tests")
+    })
+
     it('should render the correct amount of incomplete tasks', () => {
         render(<MockTodoFooter numberOfIncompleteTasks={5} />);
         const paragraphElement = screen.getByText(/5 tasks left/i);

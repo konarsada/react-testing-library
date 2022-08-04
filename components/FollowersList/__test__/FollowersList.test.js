@@ -15,6 +15,7 @@ describe("FollowersList", () => {
         render(<MockFollowersList />)
 
         const followerDivElement = await screen.findByTestId("follower-item-0")
+        screen.debug()
 
         expect(followerDivElement).toBeInTheDocument()
     })
